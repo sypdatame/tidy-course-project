@@ -43,7 +43,7 @@ PROCESS FOR TIDYING UP THE DATA
 
 -A subset of the data was extracted to include only the subject and activity columns as well as those measurements that were either means or standard deviations.  This subset is called tidy_data.
 
--Means on the measurement columns were calculated by subject and by activity (meansdata) and a second, independent file was created (tidy_data.txt).
+-Means on the measurement columns were calculated by subject and by activity (meansdata) and a second, independent file was created (means_data.txt).
 
 
 References
