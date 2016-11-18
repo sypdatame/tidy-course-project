@@ -1,0 +1,58 @@
+The data used for this project was the Human Activity Recognition Using Smartphones Data Set[1], which belongs to the UCI Machine Learning repository.
+
+
+HOW THE RAW DATA WAS COLLECTED[2]
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+
+The set of variables that were generated/calculated from the signals collected are: 
+
+mean(): Mean value
+std(): Standard deviation
+mad(): Median absolute deviation 
+max(): Largest value in array
+min(): Smallest value in array
+sma(): Signal magnitude area
+energy(): Energy measure. Sum of the squares divided by the number of values. 
+iqr(): Interquartile range 
+entropy(): Signal entropy
+arCoeff(): Autoregression coefficients with Burg order equal to 4
+correlation(): Correlation coefficient between two signals
+maxInds(): Index of the frequency component with largest magnitude
+meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+skewness(): Skewness of the frequency domain signal 
+kurtosis(): Kurtosis of the frequency domain signal 
+bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+angle(): Angle between some vectors.
+
+No unit of measures is reported as all features were normalized and bounded within [-1,1].
+
+Each record in the merged, "alldata"dataset contains:
+
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment. 
+
+PROCESS FOR TIDYING UP THE DATA
+
+-All of the raw data files were read, joined and labeled as necessary. After reading the measurement names (features) and activities (activities), joining of the data began. The subject files (subject_train, subject_test) were joined into a single file (subjectdata), the activity files (y_train, y_test) were joined into a single file(ydata) and the sensor readings as well (x_train and x_test into xdata).
+
+-Column names were added as appropriate and a single, labeled file was created (alldata) by merging the subjectdata, ydata and xdata files.
+
+-A subset of the data was extracted to include only the subject and activity columns as well as those measurements that were either means or standard deviations.  This subset is called tidy_data.
+
+-Means on the measurement columns were calculated by subject and by activity (meansdata) and a second, independent file was created (tidy_data.txt).
+
+
+References
+1.  <a name="uci-har"/>Human Activity Recognition Using Smartphones Data Set. URL: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. 
+
+2.<a name="har-smart2"/>Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. ESANN 2013 proceedings, European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning. Bruges (Belgium), 24-26 April 2013
+
+
+
+
+
+
