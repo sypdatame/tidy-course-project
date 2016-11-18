@@ -29,13 +29,13 @@ A script called run_analysis.R was created to do the following:
 
 In this repository you will find:
 
-CodeBook.md: information about the data, variables and the process by which the raw data was transformed into a tidy data set
-
-LICENSE: license terms for text and code
-
 README.md: this file
 
+CodeBook.md: information about the data, variables and the process by which the raw data was transformed into a tidy data set
+
 run_analysis.R: R script to transform the raw data set into a tidy one, following all project requirements
+
+means_data.txt: step 5 from the assignment, the second, independent tidy data set with the average of each variable for each activity and with each subject.
 
 How to replicate this work and create the tidy data set as described in this repository:
 
